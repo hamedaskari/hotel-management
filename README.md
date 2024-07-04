@@ -13,7 +13,7 @@ The Wild Oasis is a hotel management application that allows users to easily man
 ### Setting Up
 1. Clone this repository
 2. Install dependencies by running `npm install`
-3. Run the project with `npm start`
+3. Run the project with `npm run dev`
 
 ### Supabase Setup
 - The login credentials are hard-coded for simplicity. Update them in the code for production use.
