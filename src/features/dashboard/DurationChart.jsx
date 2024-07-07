@@ -15,7 +15,9 @@ const ChartBox = styled.div`
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
-
+  @media screen and (max-width: 1200px) {
+    padding: 1rem 2rem;
+  }
   padding: 2.4rem 3.2rem;
   grid-column: 3 / span 2;
 
@@ -156,8 +158,8 @@ function DurationChart({ confirmedStays }) {
             nameKey="duration"
             dataKey="value"
             innerRadius={85}
-            outerRadius={110}
-            cx="40%"
+            outerRadius={100}
+            cx="50%"
             cy="50%"
             paddingAngle={3}
           >

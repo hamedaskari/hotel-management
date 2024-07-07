@@ -61,18 +61,18 @@ const Empty = styled.p`
   margin: 2.4rem;
 `;
 
-const TableContext = createContext();
+const TableMoobileContext = createContext();
 
-function Table({ columns, children }) {
+function TableForMobile({ columns, children }) {
   return (
-    <TableContext.Provider value={{ columns }}>
+    <TableMoobileContext.Provider value={{ columns }}>
       <StyledTable role="table">{children}</StyledTable>
-    </TableContext.Provider>
+    </TableMoobileContext.Provider>
   );
 }
 
 function Header({ children }) {
-  const { columns } = useContext(TableContext);
+  const { columns } = useContext(TableMoobileContext);
   return (
     <StyledHeader role="row" columns={columns} as="header">
       {children}
@@ -80,7 +80,7 @@ function Header({ children }) {
   );
 }
 function Row({ children }) {
-  const { columns } = useContext(TableContext);
+  const { columns } = useContext(TableMoobileContext);
   return (
     <StyledRow role="row" columns={columns}>
       {children}
@@ -95,9 +95,9 @@ function Body({ data, render }) {
   return <StyledBody>{data.map(render)}</StyledBody>;
 }
 
-Table.Header = Header;
-Table.Body = Body;
-Table.Row = Row;
-Table.Footer = Footer;
+TableForMobile.Header = Header;
+TableForMobile.Body = Body;
+TableForMobile.Row = Row;
+TableForMobile.Footer = Footer;
 
-export default Table;
+export default TableForMobile;

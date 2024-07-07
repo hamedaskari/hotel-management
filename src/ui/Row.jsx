@@ -16,6 +16,9 @@ const Row = styled.div`
       flex-direction: column;
       gap: 1.6rem;
     `}
+    @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 Row.defaultProps = {
