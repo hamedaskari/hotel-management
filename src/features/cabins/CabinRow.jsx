@@ -18,6 +18,9 @@ const Img = styled.img`
   border-radius: 5px;
   object-position: center;
   transform: scale(1.5) translateX(-7px);
+  @media only screen and (max-width: 950px) {
+    display: none;
+  }
 `;
 
 const Cabin = styled.div`
@@ -25,6 +28,10 @@ const Cabin = styled.div`
   font-weight: 600;
   color: var(--color-grey-600);
   font-family: "Vazir";
+
+  @media only screen and (max-width: 950px) {
+    font-size: 1rem;
+  }
 `;
 
 const Price = styled.div`

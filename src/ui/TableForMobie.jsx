@@ -28,6 +28,11 @@ const StyledHeader = styled(CommonRow)`
   letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--color-grey-600);
+  @media only screen and (max-width: 950px) {
+    padding: 1.6rem 0.4rem;
+    column-gap: 1.4rem;
+    grid-template-columns: 0.8fr 1.5fr 2.2fr 1.5fr 1.5fr 0fr;
+  }
 `;
 
 const StyledRow = styled(CommonRow)`

@@ -28,11 +28,19 @@ const StyledHeader = styled(CommonRow)`
   letter-spacing: 0.4px;
   font-weight: 600;
   color: var(--color-grey-600);
+  @media only screen and (max-width: 950px) {
+    /* اولین فرزند این کامپوننت را پنهان کنید */
+    & > :first-child {
+      display: none;
+    }
+  }
 `;
 
 const StyledRow = styled(CommonRow)`
   padding: 1.2rem 2.4rem;
-
+  @media only screen and (max-width: 950px) {
+    font-size: 1rem;
+  }
   &:not(:last-child) {
     border-bottom: 1px solid var(--color-grey-100);
   }
