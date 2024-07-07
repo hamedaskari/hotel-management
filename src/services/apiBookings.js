@@ -1,6 +1,7 @@
 import { getToday } from "../utils/helpers";
 import supabase from "./supabase";
 import { PAGE_SIZE } from "../utils/constants";
+import toast from "react-hot-toast";
 
 export async function getBookings({ filter, sortBy, page }) {
   let query = supabase
@@ -129,4 +130,12 @@ export async function deleteBooking(id) {
     throw new Error("رزرو نمیتواند حذف شود");
   }
   return data;
+}
+
+//get guests
+export async function getGuest() {
+  let { data: guests, error } = await supabase.from("guests").select("*");
+  console.log(guests);
+  if (error) toast.error(error.message);
+  return guests;
 }
