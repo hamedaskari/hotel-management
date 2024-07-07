@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export function useSignup() {
   const [Role, setRole] = useState();
-  console.log(Role);
+
   const { mutate: signup, isLoading } = useMutation({
     mutationFn: Role === "Admin" ? signupAdmin : signupGuest,
     onSuccess: (user) => {
