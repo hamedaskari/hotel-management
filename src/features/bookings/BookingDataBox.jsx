@@ -49,6 +49,11 @@ const Header = styled.header`
     font-size: 2rem;
     margin-left: 4px;
   }
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
 `;
 
 const Section = styled.section`
@@ -65,6 +70,9 @@ const Guest = styled.div`
   & p:first-of-type {
     font-weight: 500;
     color: var(--color-grey-700);
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 1rem;
   }
 `;
 
@@ -91,6 +99,10 @@ const Price = styled.div`
     height: 2.4rem;
     width: 2.4rem;
     color: currentColor !important;
+  }
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    font-size: 1.2rem;
   }
 `;
 

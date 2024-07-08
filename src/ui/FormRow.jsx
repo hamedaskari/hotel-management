@@ -25,6 +25,11 @@ const StyledFormRow = styled.div`
     justify-content: flex-end;
     gap: 1.2rem;
   }
+  @media screen and (max-width: 950px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   @media screen and (max-width: 600px) {
     display: flex;
     justify-content: space-between;

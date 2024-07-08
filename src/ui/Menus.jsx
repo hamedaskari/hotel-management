@@ -38,6 +38,10 @@ const StyledList = styled.ul`
 
   right: ${(props) => props.position.x}px;
   top: ${(props) => props.position.y}px;
+
+  @media screen and (max-width: 950px) {
+    right: 187.922px;
+  }
 `;
 
 const StyledButton = styled.button`

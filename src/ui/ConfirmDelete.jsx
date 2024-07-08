@@ -12,11 +12,17 @@ const StyledConfirmDelete = styled.div`
     color: var(--color-grey-500);
     margin-bottom: 1.2rem;
   }
-
+  & button {
+    font-size: 1.2rem;
+  }
   & div {
     display: flex;
     justify-content: flex-end;
     gap: 1.2rem;
+  }
+  @media screen and (max-width: 950px) {
+    font-size: 1rem;
+    width: 100%;
   }
 `;
 

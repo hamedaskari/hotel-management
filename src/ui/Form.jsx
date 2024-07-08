@@ -20,6 +20,10 @@ const Form = styled.form`
     
   overflow: hidden;
   font-size: 1.4rem;
+
+  @media screen and (max-width: 950px) {
+    width: 100%;
+  }
 `;
 
 Form.defaultProps = {

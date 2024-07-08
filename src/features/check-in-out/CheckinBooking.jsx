@@ -22,6 +22,9 @@ const Box = styled.div`
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
   padding: 2.4rem 4rem;
+  @media screen and (max-width: 650px) {
+    font-size: 1.2rem;
+  }
 `;
 
 function CheckinBooking() {
