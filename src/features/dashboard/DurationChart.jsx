@@ -76,12 +76,12 @@ const startDataLight = [
 const startDataDark = [
   {
     duration: "1 شب",
-    value: 0,
+    value: 10,
     color: "#b91c1c",
   },
   {
     duration: "2 شب",
-    value: 0,
+    value: 20,
     color: "#c2410c",
   },
   {
@@ -91,12 +91,12 @@ const startDataDark = [
   },
   {
     duration: "4-5 شب",
-    value: 2,
+    value: 30,
     color: "#4d7c0f",
   },
   {
     duration: "6-7 شب",
-    value: 5,
+    value: 0,
     color: "#15803d",
   },
   {
@@ -106,7 +106,7 @@ const startDataDark = [
   },
   {
     duration: "15-21 شب",
-    value: 0,
+    value: 15,
     color: "#1d4ed8",
   },
   {

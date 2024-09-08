@@ -15,7 +15,7 @@ export function useLogin() {
     },
     onError: (err) => {
       console.log("ERROR", err);
-      toast.error("لطفا یک ایمیل معتبر وارد کنید");
+      toast.error("لطفا یک ایمیل یا پسورد معتبر وارد کنید");
     },
   });
 

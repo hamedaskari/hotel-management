@@ -25,22 +25,41 @@ const StyledSalesChart = styled(DashboardBox)`
   }
 `;
 
-function SalesChart({ bookings, numDays }) {
+function SalesChart({ numDays }) {
   const { isDarkMode } = useDarkMode();
 
   const allDates = eachDayOfInterval({
     start: subDays(new Date(), numDays - 1),
     end: new Date(),
   });
-
+  const bookings = [
+    {
+      id: 1,
+      numNights: 4,
+      numGuests: 5,
+      cabinPrice: 150000,
+      extrasPrice: 300000,
+      totalPrice: 450000,
+      day: 5,
+    },
+    {
+      id: 2,
+      numNights: 8,
+      numGuests: 2,
+      cabinPrice: 100000,
+      extrasPrice: 200000,
+      totalPrice: 30000,
+      day: 2,
+    },
+  ];
   const data = allDates.map((date) => {
     return {
       label: format(date, "MMM dd"),
       totalSales: bookings
-        .filter((booking) => isSameDay(date, new Date(booking.created_at)))
+        .filter((booking) => isSameDay(date, subDays(new Date(), booking.day)))
         .reduce((acc, cur) => acc + cur.totalPrice, 0),
       extrasSales: bookings
-        .filter((booking) => isSameDay(date, new Date(booking.created_at)))
+        .filter((booking) => isSameDay(date, subDays(new Date(), booking.day)))
         .reduce((acc, cur) => acc + cur.extrasPrice, 0),
     };
   });

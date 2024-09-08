@@ -28,19 +28,19 @@ function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
         title="رزرو ها"
         color="blue"
         icon={<HiOutlineBriefcase />}
-        value={numBookings}
+        value={10}
       />
       <Stat
         title="فروش"
         color="green"
         icon={<HiOutlineBanknotes />}
-        value={formatCurrency(sales)}
+        value={formatCurrency(2500000)}
       />
       <Stat
         title="ورودی ها"
         color="indigo"
         icon={<HiOutlineCalendarDays />}
-        value={checkins}
+        value={5}
       />
       <Stat
         title="نرخ رزرو"
