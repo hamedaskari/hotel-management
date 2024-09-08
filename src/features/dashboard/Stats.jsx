@@ -9,13 +9,13 @@ import { formatCurrency } from "../../utils/helpers";
 
 function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
   // 1.
-  const numBookings = bookings.length;
+  // const numBookings = bookings.length;
 
-  // 2.
-  const sales = bookings.reduce((acc, cur) => acc + cur.totalPrice, 0);
+  // // 2.
+  // const sales = bookings.reduce((acc, cur) => acc + cur.totalPrice, 0);
 
-  // 3.
-  const checkins = confirmedStays.length;
+  // // 3.
+  // const checkins = confirmedStays.length;
 
   // 4.
   const occupation =
